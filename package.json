@@ -1,0 +1,9 @@
+{
+  "name": "cc-usr-092204-lpr-effective-repricing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
