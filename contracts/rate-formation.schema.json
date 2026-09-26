@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "利率形成解释",
+  "description": "客户与审计共用的逐期利率形成说明：可追到当时有效的LPR、合同条款版本与加减点。",
+  "type": "object",
+  "required": [
+    "contractId",
+    "planVersion",
+    "periodIndex",
+    "variety",
+    "determinationDate",
+    "publicationId",
+    "publicationRateBp",
+    "source",
+    "spreadBp",
+    "finalRateBp",
+    "termsVersion",
+    "narrative"
+  ],
+  "properties": {
+    "contractId": { "type": "string" },
+    "planVersion": { "type": "integer", "minimum": 1 },
+    "periodIndex": { "type": "integer", "minimum": 0 },
+    "accrualStart": { "type": "string" },
+    "accrualEnd": { "type": "string" },
+    "dueDate": { "type": "string", "description": "实际还款日（节假日顺延后的营业日）" },
+    "originalDueDate": { "type": "string", "description": "合同约定的原还款日" },
+    "holidayShifts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["date", "reason"],
+        "properties": {
+          "date": { "type": "string" },
+          "reason": { "enum": ["WEEKEND", "HOLIDAY"] }
+        },
+        "additionalProperties": false
+      },
+      "description": "顺延轨迹：被跳过的每一日及原因"
+    },
+    "variety": { "enum": ["1Y", "5Y_PLUS"] },
+    "determinationDate": { "type": "string", "description": "重定价日" },
+    "publicationId": { "type": "string", "description": "引用的LPR报价标识" },
+    "publicationRateBp": { "type": "integer" },
+    "publicationEffectiveFrom": { "type": "string" },
+    "publicationEffectiveTo": { "type": ["string", "null"] },
+    "source": { "type": "string", "description": "授权发布来源" },
+    "spreadBp": { "type": "integer", "description": "合同加减点（基点）" },
+    "finalRateBp": { "type": "integer", "description": "最终执行利率（基点）" },
+    "termsVersion": { "type": "integer", "minimum": 1, "description": "适用的合同条款版本" },
+    "correctedBy": { "type": ["string", "null"], "description": "若引用报价已被勘误，指向勘误记录" },
+    "narrative": { "type": "string", "description": "面向客户的自然语言说明" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "命令信封",
+  "description": "所有变更消息的公共结构：messageId 为客户端唯一标识，重复投递按首次结果返回，不得重复入账。",
+  "type": "object",
+  "required": [
+    "messageId",
+    "type",
+    "occurredAt",
+    "payload"
+  ],
+  "properties": {
+    "messageId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:-]+$",
+      "description": "客户端唯一消息标识"
+    },
+    "type": {
+      "enum": [
+        "PublishLpr",
+        "PublishErrata",
+        "RegisterContract",
+        "RunBatchRepricing",
+        "RequestRateConversion",
+        "RequestEarlyRepayment",
+        "PostDueInterest",
+        "ReversePosting",
+        "ApplyErrataCorrection",
+        "UpdateCalendar"
+      ],
+      "description": "命令类型"
+    },
+    "occurredAt": {
+      "type": "string",
+      "description": "客户端时间戳"
+    },
+    "payload": {
+      "type": "object",
+      "description": "各命令类型的业务载荷"
+    }
+  },
+  "additionalProperties": false
+}

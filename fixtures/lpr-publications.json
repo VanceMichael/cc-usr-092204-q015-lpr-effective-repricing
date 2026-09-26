@@ -1,0 +1,11 @@
+{
+  "note": "去标识样例：数值仅用于演示，不构成任何真实报价。发布机构为央行授权的全国银行间同业拆借中心。",
+  "publications": [
+    { "id": "LPR-1Y-20241220", "variety": "1Y", "rateBp": 310, "publishDate": "2024-12-20", "effectiveFrom": "2024-12-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" },
+    { "id": "LPR-5YP-20241220", "variety": "5Y_PLUS", "rateBp": 360, "publishDate": "2024-12-20", "effectiveFrom": "2024-12-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" },
+    { "id": "LPR-1Y-20250520", "variety": "1Y", "rateBp": 300, "publishDate": "2025-05-20", "effectiveFrom": "2025-05-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" },
+    { "id": "LPR-5YP-20250520", "variety": "5Y_PLUS", "rateBp": 350, "publishDate": "2025-05-20", "effectiveFrom": "2025-05-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" },
+    { "id": "LPR-1Y-20260120", "variety": "1Y", "rateBp": 295, "publishDate": "2026-01-20", "effectiveFrom": "2026-01-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" },
+    { "id": "LPR-5YP-20260120", "variety": "5Y_PLUS", "rateBp": 345, "publishDate": "2026-01-20", "effectiveFrom": "2026-01-20", "source": "全国银行间同业拆借中心", "approvedBy": "运营方" }
+  ]
+}
