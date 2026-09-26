@@ -1,0 +1,265 @@
+{
+  "events": [
+    {
+      "event_id": "E-A-REPR-2024",
+      "contract_id": "LN-A-2023-0001",
+      "type": "schedule_adjustment",
+      "occurred_at": "2024-09-25T10:00:00+08:00",
+      "effective_date": "2024-09-25",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-ANNUAL）",
+      "approval_ref": "BATCH-20240925-A-0001",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-A-REPR-2024",
+      "detail": {
+        "repricing_date": "2024-09-25",
+        "quote_before": "Q-5Y+-2023-08",
+        "quote_after": "Q-5Y+-2024-07",
+        "rate_bps_before": 450,
+        "rate_bps_after": 435
+      }
+    },
+    {
+      "event_id": "E-A-TERMS-2025",
+      "contract_id": "LN-A-2023-0001",
+      "type": "terms_change",
+      "occurred_at": "2025-09-24T16:30:00+08:00",
+      "effective_date": "2025-09-25",
+      "approved_by": "零售信贷审批岗 LI/M2230",
+      "approval_ref": "APV-CONV-20250924-007",
+      "origin": "customer_channel",
+      "idempotency_key": "IDEMP-E-A-TERMS-2025",
+      "detail": {
+        "change_kind": "rate_conversion_spread_renewal",
+        "spread_bps_before": 50,
+        "spread_bps_after": -10,
+        "note": "客户申请利率转换并重新核定加减点；基准品种与重定价频率不变，自重定价日起适用"
+      }
+    },
+    {
+      "event_id": "E-A-REPR-2025-BATCH",
+      "contract_id": "LN-A-2023-0001",
+      "type": "schedule_adjustment",
+      "occurred_at": "2025-09-25T10:00:00+08:00",
+      "effective_date": "2025-09-25",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-ANNUAL）",
+      "approval_ref": "BATCH-20250925-A-0001",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-A-REPR-2025-BATCH",
+      "detail": {
+        "outcome": "abandoned_concurrent_terms_change",
+        "abandoned_schedule_id": "SC-A-V3-DRAFT",
+        "winner_event_id": "E-A-TERMS-2025",
+        "note": "提交时合同条款已由客户变更推进至v2，本批次草稿废弃，未成为正式计划"
+      }
+    },
+    {
+      "event_id": "E-A-PREPAY-2026",
+      "contract_id": "LN-A-2023-0001",
+      "type": "prepayment",
+      "occurred_at": "2026-03-12T10:02:00+08:00",
+      "effective_date": "2026-03-25",
+      "approved_by": "客户经理 WANG/Q3095；放款复核 ZHAO/R1180",
+      "approval_ref": "APV-PREP-20260312-041",
+      "origin": "customer_channel",
+      "idempotency_key": "IDEMP-E-A-PREPAY-2026",
+      "detail": {
+        "prepayment_amount_cents": 20000000,
+        "settle_to_date": "2026-03-25",
+        "term_handling": "keep_maturity_reduce_payment",
+        "note": "提前还款仅冲减本金并重算2026-03-25及以后未来期；历史已入账期间不变"
+      }
+    },
+    {
+      "event_id": "E-A-REPR-2026",
+      "contract_id": "LN-A-2023-0001",
+      "type": "schedule_adjustment",
+      "occurred_at": "2026-09-25T10:00:00+08:00",
+      "effective_date": "2026-09-25",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-ANNUAL）",
+      "approval_ref": "BATCH-20260925-A-0001",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-A-REPR-2026",
+      "detail": {
+        "repricing_date": "2026-09-25",
+        "quote_after": "Q-5Y+-2026-05",
+        "quote_rate_bps": 380,
+        "spread_bps": -10,
+        "rate_bps_after": 370,
+        "terms_version": 2
+      }
+    },
+    {
+      "event_id": "E-B-REPR-2024-09",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2024-09-20T10:00:00+08:00",
+      "effective_date": "2024-09-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20240920-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-2024-09",
+      "detail": {
+        "repricing_date": "2024-09-20",
+        "repricing_date_adjusted": "2024-09-20",
+        "quote_after": "Q-1Y-2024-09",
+        "rate_bps_after": 300
+      }
+    },
+    {
+      "event_id": "E-B-REPR-2024-12",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2024-12-20T10:00:00+08:00",
+      "effective_date": "2024-12-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20241220-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-2024-12",
+      "detail": {
+        "repricing_date": "2024-12-20",
+        "repricing_date_adjusted": "2024-12-20",
+        "quote_after": "Q-1Y-2024-12",
+        "rate_bps_after": 280
+      }
+    },
+    {
+      "event_id": "E-B-CORRECT-2025-01",
+      "contract_id": "LN-B-2024-0002",
+      "type": "rate_correction",
+      "occurred_at": "2025-01-22T13:40:00+08:00",
+      "effective_date": "2025-01-22",
+      "approved_by": "计财部利率管理岗 SUN/Y0521",
+      "approval_ref": "APV-ERRC-20250122-002",
+      "origin": "policy_correction",
+      "idempotency_key": "IDEMP-E-B-CORRECT-2025-01",
+      "detail": {
+        "tenor": "1Y",
+        "original_quote_id": "Q-1Y-2024-12",
+        "original_rate_bps": 310,
+        "corrected_quote_id": "Q-1Y-2024-12-ERR",
+        "corrected_rate_bps": 315,
+        "spread_bps": -30,
+        "rate_bps_before": 280,
+        "rate_bps_after": 285,
+        "posted_periods_corrected_by_reversal": [
+          7
+        ],
+        "future_periods_regenerated_from": 8,
+        "notice_ref": "SHIBOR-LPR-A-202412-E"
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20250320",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2025-03-20T10:00:00+08:00",
+      "effective_date": "2025-03-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20250320-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20250320",
+      "detail": {
+        "repricing_date": "2025-03-20",
+        "repricing_date_adjusted": "2025-03-20",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20250620",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2025-06-20T10:00:00+08:00",
+      "effective_date": "2025-06-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20250620-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20250620",
+      "detail": {
+        "repricing_date": "2025-06-20",
+        "repricing_date_adjusted": "2025-06-20",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20250920",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2025-09-22T10:00:00+08:00",
+      "effective_date": "2025-09-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20250920-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20250920",
+      "detail": {
+        "repricing_date": "2025-09-20",
+        "repricing_date_adjusted": "2025-09-22",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20251220",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2025-12-22T10:00:00+08:00",
+      "effective_date": "2025-12-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20251220-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20251220",
+      "detail": {
+        "repricing_date": "2025-12-20",
+        "repricing_date_adjusted": "2025-12-22",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20260320",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2026-03-20T10:00:00+08:00",
+      "effective_date": "2026-03-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20260320-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20260320",
+      "detail": {
+        "repricing_date": "2026-03-20",
+        "repricing_date_adjusted": "2026-03-20",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20260620",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2026-06-22T10:00:00+08:00",
+      "effective_date": "2026-06-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20260620-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20260620",
+      "detail": {
+        "repricing_date": "2026-06-20",
+        "repricing_date_adjusted": "2026-06-22",
+        "quote_after": null
+      }
+    },
+    {
+      "event_id": "E-B-REPR-20260920",
+      "contract_id": "LN-B-2024-0002",
+      "type": "schedule_adjustment",
+      "occurred_at": "2026-09-21T10:00:00+08:00",
+      "effective_date": "2026-09-20",
+      "approved_by": "系统自动（批量重定价任务 BATCH-LPR-QUARTERLY）",
+      "approval_ref": "BATCH-20260920-B-0002",
+      "origin": "batch_repricing",
+      "idempotency_key": "IDEMP-E-B-REPR-20260920",
+      "detail": {
+        "repricing_date": "2026-09-20",
+        "repricing_date_adjusted": "2026-09-21",
+        "quote_after": "Q-1Y-2026-09",
+        "rate_bps_after": 270
+      }
+    }
+  ]
+}

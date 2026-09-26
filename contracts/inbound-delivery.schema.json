@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "入站消息投递登记",
+  "description": "外部发布/变更消息的投递台账。同一 message_id（幂等键）重复投递只处理一次；attempts 记录每次投递与处理结果，支撑重复投递审计。",
+  "type": "object",
+  "required": [
+    "message_id",
+    "topic",
+    "contract_id",
+    "first_received_at",
+    "attempts",
+    "processed",
+    "result_ref"
+  ],
+  "properties": {
+    "message_id": {
+      "type": "string",
+      "description": "消息幂等键（发布方生成，全局唯一）"
+    },
+    "topic": {
+      "type": "string",
+      "enum": ["lpr_quote_published", "lpr_quote_corrected", "contract_change", "prepayment"],
+      "description": "报价发布 / 报价勘误 / 条款变更 / 提前还款"
+    },
+    "contract_id": {
+      "type": ["string", "null"],
+      "description": "合同级消息指向的合同；报价类消息为null"
+    },
+    "first_received_at": { "type": "string", "format": "date-time" },
+    "attempts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["received_at", "handler", "outcome"],
+        "properties": {
+          "received_at": { "type": "string", "format": "date-time" },
+          "handler": { "type": "string", "description": "处理节点/批次号" },
+          "outcome": {
+            "type": "string",
+            "enum": ["processed", "duplicate_skipped", "failed_retryable"],
+            "description": "首次处理 / 重复丢弃 / 可重试失败"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "processed": {
+      "type": "boolean",
+      "description": "是否已产生过一次业务效果（入账或版本）；重复投递保持true且不追加效果"
+    },
+    "result_ref": {
+      "type": ["string", "null"],
+      "description": "首次处理产生的结果引用（event_id / schedule_id / quote_id）"
+    }
+  },
+  "additionalProperties": false
+}

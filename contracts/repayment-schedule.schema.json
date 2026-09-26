@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "还款计划版本",
+  "description": "同一合同的一版完整分期计划。任一时点至多一条 official；新版本生效时旧版本置 superseded，未生效废弃草稿置 abandoned。每期保存利率快照，使后续报价勘误不会静默改变历史计划。",
+  "type": "object",
+  "required": [
+    "schedule_id",
+    "contract_id",
+    "version",
+    "status",
+    "created_at",
+    "official_from",
+    "superseded_at",
+    "origin",
+    "change_event_id",
+    "basis",
+    "installments"
+  ],
+  "properties": {
+    "schedule_id": { "type": "string" },
+    "contract_id": { "type": "string" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "official", "superseded", "abandoned"],
+      "description": "草稿 / 正式 / 被替代 / 废弃（并发落败方）"
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "official_from": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "成为正式计划的日期（含）；draft/abandoned 为 null"
+    },
+    "superseded_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "被新版本替代的时刻"
+    },
+    "origin": {
+      "type": "string",
+      "enum": ["disbursement", "batch_repricing", "customer_channel", "policy_correction"],
+      "description": "版本来源：放款生成 / 批量重定价 / 客户临时变更（提前还款、条款变更）/ 报价勘误更正"
+    },
+    "change_event_id": {
+      "type": ["string", "null"],
+      "description": "产生本版本的变更事件；放款首版可为null"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "description": "版本生成请求的幂等键，重复消息不产生第二版"
+    },
+    "basis": {
+      "type": "object",
+      "required": ["generated_at_quote_set", "terms_version_at_generation"],
+      "properties": {
+        "generated_at_quote_set": {
+          "type": "string",
+          "description": "生成时刻所依据的报价集合摘要（如发布批次时间戳）"
+        },
+        "terms_version_at_generation": {
+          "type": "integer",
+          "description": "生成时合同条款版本号"
+        }
+      },
+      "additionalProperties": false
+    },
+    "installments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "period_no",
+          "period_start",
+          "period_end",
+          "due_date",
+          "rate_snapshot",
+          "principal_cents",
+          "interest_cents",
+          "balance_before_cents"
+        ],
+        "properties": {
+          "period_no": { "type": "integer", "minimum": 1 },
+          "period_start": { "type": "string", "format": "date", "description": "计息区间起（含）" },
+          "period_end": { "type": "string", "format": "date", "description": "计息区间止（不含）" },
+          "due_date": { "type": "string", "format": "date", "description": "约定还款日（节假日顺延后的实际日期记在 adjusted_due_date）" },
+          "adjusted_due_date": {
+            "type": ["string", "null"],
+            "format": "date",
+            "description": "节假日顺延规则产生的实际还款日；未顺延为null"
+          },
+          "rate_snapshot": {
+            "type": "object",
+            "required": [
+              "repricing_date",
+              "repricing_date_adjusted",
+              "quote_id",
+              "benchmark_tenor",
+              "quote_rate_bps",
+              "spread_bps",
+              "effective_rate_bps",
+              "terms_version",
+              "formula"
+            ],
+            "properties": {
+              "repricing_date": { "type": "string", "format": "date", "description": "合同名义重定价日" },
+              "repricing_date_adjusted": {
+                "type": "string",
+                "format": "date",
+                "description": "节假日顺延后实际取价日；未顺延则与名义日相同"
+              },
+              "quote_id": {
+                "type": ["string", "null"],
+                "description": "引用的报价版本ID（快照，不随后续勘误改变）；重定价日尚未到达的期间为null"
+              },
+              "benchmark_tenor": { "type": "string", "enum": ["1Y", "5Y+"] },
+              "quote_rate_bps": {
+                "type": ["integer", "null"],
+                "description": "取价日报价（基点）快照；未到重定价日为null"
+              },
+              "spread_bps": { "type": "integer" },
+              "effective_rate_bps": {
+                "type": ["integer", "null"],
+                "description": "执行利率 = quote_rate_bps + spread_bps；未到重定价日为null"
+              },
+              "terms_version": { "type": "integer", "description": "引用的合同条款版本" },
+              "formula": {
+                "type": "string",
+                "description": "人类可读的利率形成说明"
+              }
+            },
+            "additionalProperties": false
+          },
+          "principal_cents": {
+            "type": ["integer", "null"],
+            "description": "本期应还本金（分）；重定价日未到的未来期在生成新版前为null"
+          },
+          "interest_cents": {
+            "type": ["integer", "null"],
+            "description": "本期利息（分），按区间天数与执行利率计算；未来期为null"
+          },
+          "balance_before_cents": {
+            "type": ["integer", "null"],
+            "description": "期初本金余额（分）；未来期为null"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

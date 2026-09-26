@@ -4,6 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate-fixtures": "node scripts/build-fixtures.mjs",
+    "start": "node src/server.js",
     "test": "node --test"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
   }
 }

@@ -1,0 +1,633 @@
+{
+  "quotes": [
+    {
+      "quote_id": "Q-1Y-2024-06",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202406"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 345,
+      "publish_date": "2024-06-20T09:15:00+08:00",
+      "effective_from": "2024-06-20T09:15:00+08:00",
+      "effective_to": "2024-07-22T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-07",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202407"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 335,
+      "publish_date": "2024-07-22T09:15:00+08:00",
+      "effective_from": "2024-07-22T09:15:00+08:00",
+      "effective_to": "2024-08-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-08",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202408"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 335,
+      "publish_date": "2024-08-20T09:15:00+08:00",
+      "effective_from": "2024-08-20T09:15:00+08:00",
+      "effective_to": "2024-09-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-09",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202409"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 330,
+      "publish_date": "2024-09-20T09:15:00+08:00",
+      "effective_from": "2024-09-20T09:15:00+08:00",
+      "effective_to": "2024-10-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-10",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202410"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 325,
+      "publish_date": "2024-10-21T09:15:00+08:00",
+      "effective_from": "2024-10-21T09:15:00+08:00",
+      "effective_to": "2024-11-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-11",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202411"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 325,
+      "publish_date": "2024-11-20T09:15:00+08:00",
+      "effective_from": "2024-11-20T09:15:00+08:00",
+      "effective_to": "2024-12-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2024-12",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202412"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 310,
+      "publish_date": "2024-12-20T09:15:00+08:00",
+      "effective_from": "2024-12-20T09:15:00+08:00",
+      "effective_to": "2024-12-23T09:30:00+08:00",
+      "status": "corrected",
+      "erratum_note": "首发数值录入有误，已由勘误版本替代，见同批次v2"
+    },
+    {
+      "quote_id": "Q-1Y-2024-12-ERR",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202412-E"
+      },
+      "tenor": "1Y",
+      "version": 2,
+      "supersedes_quote_id": "Q-1Y-2024-12",
+      "rate_bps": 315,
+      "publish_date": "2024-12-23T09:30:00+08:00",
+      "effective_from": "2024-12-20T09:15:00+08:00",
+      "effective_to": "2025-01-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": "勘误：一年期LPR应为3.15%，原公告3.10%有误，特此更正"
+    },
+    {
+      "quote_id": "Q-1Y-2025-01",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202501"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 310,
+      "publish_date": "2025-01-20T09:15:00+08:00",
+      "effective_from": "2025-01-20T09:15:00+08:00",
+      "effective_to": "2025-02-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-02",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202502"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 310,
+      "publish_date": "2025-02-20T09:15:00+08:00",
+      "effective_from": "2025-02-20T09:15:00+08:00",
+      "effective_to": "2025-03-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-03",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202503"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 305,
+      "publish_date": "2025-03-20T09:15:00+08:00",
+      "effective_from": "2025-03-20T09:15:00+08:00",
+      "effective_to": "2025-04-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-04",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202504"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 305,
+      "publish_date": "2025-04-21T09:15:00+08:00",
+      "effective_from": "2025-04-21T09:15:00+08:00",
+      "effective_to": "2025-05-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-05",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202505"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 300,
+      "publish_date": "2025-05-20T09:15:00+08:00",
+      "effective_from": "2025-05-20T09:15:00+08:00",
+      "effective_to": "2025-06-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-06",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202506"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 300,
+      "publish_date": "2025-06-20T09:15:00+08:00",
+      "effective_from": "2025-06-20T09:15:00+08:00",
+      "effective_to": "2025-07-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-07",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202507"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 300,
+      "publish_date": "2025-07-21T09:15:00+08:00",
+      "effective_from": "2025-07-21T09:15:00+08:00",
+      "effective_to": "2025-08-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-08",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202508"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 295,
+      "publish_date": "2025-08-20T09:15:00+08:00",
+      "effective_from": "2025-08-20T09:15:00+08:00",
+      "effective_to": "2025-09-22T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-09",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202509"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 295,
+      "publish_date": "2025-09-22T09:15:00+08:00",
+      "effective_from": "2025-09-22T09:15:00+08:00",
+      "effective_to": "2025-10-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-10",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202510"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 290,
+      "publish_date": "2025-10-20T09:15:00+08:00",
+      "effective_from": "2025-10-20T09:15:00+08:00",
+      "effective_to": "2025-11-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-11",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202511"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 290,
+      "publish_date": "2025-11-20T09:15:00+08:00",
+      "effective_from": "2025-11-20T09:15:00+08:00",
+      "effective_to": "2025-12-22T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2025-12",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202512"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 285,
+      "publish_date": "2025-12-22T09:15:00+08:00",
+      "effective_from": "2025-12-22T09:15:00+08:00",
+      "effective_to": "2026-01-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-01",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202601"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 285,
+      "publish_date": "2026-01-20T09:15:00+08:00",
+      "effective_from": "2026-01-20T09:15:00+08:00",
+      "effective_to": "2026-02-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-02",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202602"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 280,
+      "publish_date": "2026-02-20T09:15:00+08:00",
+      "effective_from": "2026-02-20T09:15:00+08:00",
+      "effective_to": "2026-03-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-03",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202603"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 280,
+      "publish_date": "2026-03-20T09:15:00+08:00",
+      "effective_from": "2026-03-20T09:15:00+08:00",
+      "effective_to": "2026-04-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-04",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202604"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 285,
+      "publish_date": "2026-04-20T09:15:00+08:00",
+      "effective_from": "2026-04-20T09:15:00+08:00",
+      "effective_to": "2026-05-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-05",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202605"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 290,
+      "publish_date": "2026-05-20T09:15:00+08:00",
+      "effective_from": "2026-05-20T09:15:00+08:00",
+      "effective_to": "2026-06-22T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-06",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202606"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 290,
+      "publish_date": "2026-06-22T09:15:00+08:00",
+      "effective_from": "2026-06-22T09:15:00+08:00",
+      "effective_to": "2026-07-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-07",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202607"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 295,
+      "publish_date": "2026-07-20T09:15:00+08:00",
+      "effective_from": "2026-07-20T09:15:00+08:00",
+      "effective_to": "2026-08-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-08",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202608"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 300,
+      "publish_date": "2026-08-20T09:15:00+08:00",
+      "effective_from": "2026-08-20T09:15:00+08:00",
+      "effective_to": "2026-09-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-1Y-2026-09",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-A-202609"
+      },
+      "tenor": "1Y",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 300,
+      "publish_date": "2026-09-21T09:15:00+08:00",
+      "effective_from": "2026-09-21T09:15:00+08:00",
+      "effective_to": null,
+      "status": "active",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2023-06",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202306"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 420,
+      "publish_date": "2023-06-20T09:15:00+08:00",
+      "effective_from": "2023-06-20T09:15:00+08:00",
+      "effective_to": "2023-08-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2023-08",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202308"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 400,
+      "publish_date": "2023-08-21T09:15:00+08:00",
+      "effective_from": "2023-08-21T09:15:00+08:00",
+      "effective_to": "2024-02-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2024-02",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202402"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 395,
+      "publish_date": "2024-02-20T09:15:00+08:00",
+      "effective_from": "2024-02-20T09:15:00+08:00",
+      "effective_to": "2024-07-22T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2024-07",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202407"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 385,
+      "publish_date": "2024-07-22T09:15:00+08:00",
+      "effective_from": "2024-07-22T09:15:00+08:00",
+      "effective_to": "2024-10-21T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2024-10",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202410"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 360,
+      "publish_date": "2024-10-21T09:15:00+08:00",
+      "effective_from": "2024-10-21T09:15:00+08:00",
+      "effective_to": "2025-05-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2025-05",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202505"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 370,
+      "publish_date": "2025-05-20T09:15:00+08:00",
+      "effective_from": "2025-05-20T09:15:00+08:00",
+      "effective_to": "2025-10-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2025-10",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202510"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 365,
+      "publish_date": "2025-10-20T09:15:00+08:00",
+      "effective_from": "2025-10-20T09:15:00+08:00",
+      "effective_to": "2026-05-20T09:15:00+08:00",
+      "status": "expired",
+      "erratum_note": null
+    },
+    {
+      "quote_id": "Q-5Y+-2026-05",
+      "source": {
+        "publisher": "全国银行间同业拆借中心",
+        "channel": "中国货币网官方公告",
+        "notice_ref": "SHIBOR-LPR-B-202605"
+      },
+      "tenor": "5Y+",
+      "version": 1,
+      "supersedes_quote_id": null,
+      "rate_bps": 380,
+      "publish_date": "2026-05-20T09:15:00+08:00",
+      "effective_from": "2026-05-20T09:15:00+08:00",
+      "effective_to": null,
+      "status": "active",
+      "erratum_note": null
+    }
+  ]
+}

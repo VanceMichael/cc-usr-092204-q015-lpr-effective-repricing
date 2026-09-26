@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "利息入账记录",
+  "description": "已入账记录不可修改、不可静默重算。更正通过红冲（reversal，金额为负）与蓝补（correction）成对登记，均引用原入账与批准事件。同一幂等键只允许一条 posted 记录。",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "contract_id",
+    "schedule_id",
+    "period_no",
+    "kind",
+    "amount_cents",
+    "posted_at",
+    "value_date",
+    "status",
+    "idempotency_key",
+    "rate_quote_id",
+    "terms_version",
+    "reversal_of",
+    "correction_of",
+    "change_event_id"
+  ],
+  "properties": {
+    "entry_id": { "type": "string" },
+    "contract_id": { "type": "string" },
+    "schedule_id": { "type": "string", "description": "入账时依据的计划版本" },
+    "period_no": { "type": "integer", "minimum": 1 },
+    "kind": {
+      "type": "string",
+      "enum": ["interest_original", "reversal", "correction"],
+      "description": "原始利息入账 / 红冲 / 蓝补"
+    },
+    "amount_cents": {
+      "type": "integer",
+      "description": "入账金额（分）；红冲为负，与被冲原始金额绝对值相等"
+    },
+    "posted_at": { "type": "string", "format": "date-time" },
+    "value_date": { "type": "string", "format": "date" },
+    "status": {
+      "type": "string",
+      "enum": ["posted", "reversed"],
+      "description": "posted=有效；原始入账被红冲后置 reversed（记录本身不删除）"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "description": "入账幂等键；重复投递的入账请求命中同键即丢弃，不重复入账"
+    },
+    "rate_quote_id": {
+      "type": "string",
+      "description": "该笔利息计息所引用的LPR报价版本"
+    },
+    "terms_version": { "type": "integer", "description": "计息时有效的合同条款版本" },
+    "reversal_of": {
+      "type": ["string", "null"],
+      "description": "kind=reversal 时指向被冲销的原始入账 entry_id"
+    },
+    "correction_of": {
+      "type": ["string", "null"],
+      "description": "kind=correction 时指向被更正的原始入账 entry_id"
+    },
+    "change_event_id": {
+      "type": ["string", "null"],
+      "description": "冲正/蓝补依据的批准事件；原始正常入账为null"
+    }
+  },
+  "additionalProperties": false
+}

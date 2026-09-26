@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "合同变更事件",
+  "description": "条款变更、提前还款、报价勘误后的利率更正等均以经批准事件登记；事件只影响未来计息区间，历史更正通过红冲蓝补。",
+  "type": "object",
+  "required": [
+    "event_id",
+    "contract_id",
+    "type",
+    "occurred_at",
+    "effective_date",
+    "approved_by",
+    "approval_ref",
+    "origin",
+    "idempotency_key",
+    "detail"
+  ],
+  "properties": {
+    "event_id": { "type": "string" },
+    "contract_id": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["terms_change", "prepayment", "rate_correction", "schedule_adjustment"],
+      "description": "条款变更 / 提前还款 / 勘误利率更正 / 还款日等计划调整"
+    },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "effective_date": {
+      "type": "string",
+      "format": "date",
+      "description": "对未来区间的生效日；早于该日的已入账期间不受影响"
+    },
+    "approved_by": { "type": "string" },
+    "approval_ref": { "type": "string" },
+    "origin": {
+      "type": "string",
+      "enum": ["batch_repricing", "customer_channel", "policy_correction"],
+      "description": "来源：批量重定价 / 客户临时变更 / 勘误更正"
+    },
+    "idempotency_key": {
+      "type": "string",
+      "description": "事件幂等键，相同键重复提交只生效一次"
+    },
+    "detail": {
+      "type": "object",
+      "description": "按事件类型存放的载荷（如新旧加点、提前还款金额、勘误报价ID）"
+    }
+  },
+  "additionalProperties": false
+}

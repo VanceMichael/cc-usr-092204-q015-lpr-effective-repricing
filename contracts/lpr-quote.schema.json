@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LPR报价版本",
+  "description": "授权发布机构公布的某期限品种报价；勘误以新版本登记，原版本在其有效区间内保留可追溯。同一期限品种的有效区间互不重叠、首尾相接。",
+  "type": "object",
+  "required": [
+    "quote_id",
+    "source",
+    "tenor",
+    "version",
+    "rate_bps",
+    "publish_date",
+    "effective_from",
+    "effective_to",
+    "status"
+  ],
+  "properties": {
+    "quote_id": {
+      "type": "string",
+      "description": "报价版本唯一标识；勘误使用新ID并通过 supersedes_quote_id 关联"
+    },
+    "source": {
+      "type": "object",
+      "required": ["publisher", "channel", "notice_ref"],
+      "properties": {
+        "publisher": {
+          "type": "string",
+          "description": "授权发布机构，如全国银行间同业拆借中心"
+        },
+        "channel": { "type": "string", "description": "授权渠道，如中国货币网官方公告" },
+        "notice_ref": { "type": "string", "description": "公告/勘误公告编号" }
+      },
+      "additionalProperties": false
+    },
+    "tenor": {
+      "type": "string",
+      "enum": ["1Y", "5Y+"],
+      "description": "期限品种：一年期 / 五年期以上"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "同一发布批次内的版本号，勘误递增"
+    },
+    "supersedes_quote_id": {
+      "type": ["string", "null"],
+      "description": "勘误所替代的原报价版本ID；首发为null"
+    },
+    "rate_bps": {
+      "type": "integer",
+      "description": "年化报价，基点（1bp=0.01%）"
+    },
+    "publish_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "发布（或勘误重新发布）时刻，用于溯源，不等于合同重定价日"
+    },
+    "effective_from": {
+      "type": "string",
+      "format": "date-time",
+      "description": "生效时刻（含）"
+    },
+    "effective_to": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "失效时刻（不含）；null 表示持续有效至下一版本"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "expired", "corrected", "withdrawn"],
+      "description": "active=当前有效；expired=已被下一版正常发布替代（区间自然到期）；corrected=已被勘误版本替代；withdrawn=发布机构撤回"
+    },
+    "erratum_note": {
+      "type": ["string", "null"],
+      "description": "勘误/撤回说明原文摘要"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,75 @@
+{
+  "contracts": [
+    {
+      "contract_id": "LN-A-2023-0001",
+      "product": "个人经营性抵押贷款（浮动利率）",
+      "currency": "CNY",
+      "principal_cents": 100000000,
+      "start_date": "2023-09-25",
+      "maturity_date": "2028-09-25",
+      "day_count": "ACT/365",
+      "repayment_method": "equal_installment",
+      "payment_frequency_months": 1,
+      "terms_versions": [
+        {
+          "version": 1,
+          "effective_from": "2023-09-25",
+          "effective_to": "2025-09-25",
+          "benchmark_tenor": "5Y+",
+          "spread_bps": 50,
+          "repricing_frequency_months": 12,
+          "repricing_day_rule": "loan_anniversary",
+          "day_of_month": null,
+          "holiday_rule": "following_adjusted",
+          "application": "on_repricing_date",
+          "change_event_id": null,
+          "approved_by": "放款审批岗 ZHANG/W0812",
+          "approval_ref": "APV-DISB-20230925-118"
+        },
+        {
+          "version": 2,
+          "effective_from": "2025-09-25",
+          "effective_to": null,
+          "benchmark_tenor": "5Y+",
+          "spread_bps": -10,
+          "repricing_frequency_months": 12,
+          "repricing_day_rule": "loan_anniversary",
+          "day_of_month": null,
+          "holiday_rule": "following_adjusted",
+          "application": "on_repricing_date",
+          "change_event_id": "E-A-TERMS-2025",
+          "approved_by": "零售信贷审批岗 LI/M2230",
+          "approval_ref": "APV-CONV-20250924-007"
+        }
+      ]
+    },
+    {
+      "contract_id": "LN-B-2024-0002",
+      "product": "小微企业流动资金贷款（浮动利率）",
+      "currency": "CNY",
+      "principal_cents": 50000000,
+      "start_date": "2024-06-20",
+      "maturity_date": "2027-06-20",
+      "day_count": "ACT/365",
+      "repayment_method": "equal_installment",
+      "payment_frequency_months": 1,
+      "terms_versions": [
+        {
+          "version": 1,
+          "effective_from": "2024-06-20",
+          "effective_to": null,
+          "benchmark_tenor": "1Y",
+          "spread_bps": -30,
+          "repricing_frequency_months": 3,
+          "repricing_day_rule": "month_day",
+          "day_of_month": 20,
+          "holiday_rule": "following_adjusted",
+          "application": "on_repricing_date",
+          "change_event_id": null,
+          "approved_by": "放款审批岗 CHEN/H4471",
+          "approval_ref": "APV-DISB-20240620-352"
+        }
+      ]
+    }
+  ]
+}

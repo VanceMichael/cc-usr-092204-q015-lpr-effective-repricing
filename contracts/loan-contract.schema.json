@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "贷款合同（条款按版本保存）",
+  "description": "合同要素的任何变更产生新条款版本；重定价只引用重定价日有效条款版本，不修改历史版本。",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "product",
+    "currency",
+    "principal_cents",
+    "start_date",
+    "maturity_date",
+    "day_count",
+    "repayment_method",
+    "payment_frequency_months",
+    "terms_versions"
+  ],
+  "properties": {
+    "contract_id": { "type": "string", "description": "去标识合同号" },
+    "product": { "type": "string", "description": "产品名称" },
+    "currency": { "type": "string", "enum": ["CNY"] },
+    "principal_cents": { "type": "integer", "minimum": 1, "description": "合同初始本金（分）" },
+    "start_date": { "type": "string", "format": "date", "description": "放款日" },
+    "maturity_date": { "type": "string", "format": "date" },
+    "day_count": {
+      "type": "string",
+      "enum": ["ACT/360", "ACT/365", "ACT/ACT"],
+      "description": "计息基准"
+    },
+    "repayment_method": {
+      "type": "string",
+      "enum": ["equal_principal", "equal_installment", "interest_only_bullet"],
+      "description": "还款方式：等额本金 / 等额本息 / 先息后本（到期还本）"
+    },
+    "payment_frequency_months": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "还款周期（月）"
+    },
+    "terms_versions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "effective_from",
+          "effective_to",
+          "benchmark_tenor",
+          "spread_bps",
+          "repricing_frequency_months",
+          "repricing_day_rule",
+          "holiday_rule",
+          "application",
+          "approved_by",
+          "approval_ref"
+        ],
+        "properties": {
+          "version": { "type": "integer", "minimum": 1 },
+          "effective_from": { "type": "string", "format": "date", "description": "条款生效日（含）" },
+          "effective_to": { "type": ["string", "null"], "format": "date", "description": "条款失效日（不含），null为最新" },
+          "benchmark_tenor": { "type": "string", "enum": ["1Y", "5Y+"], "description": "合同基准：锚定的LPR期限品种" },
+          "spread_bps": {
+            "type": "integer",
+            "description": "合同加减点（基点，可为负）；执行利率 = 基准LPR + 加点"
+          },
+          "repricing_frequency_months": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "重定价频率（月），如12=按年、3=按季、1=按月"
+          },
+          "repricing_day_rule": {
+            "type": "string",
+            "enum": ["loan_anniversary", "month_day"],
+            "description": "重定价日规则：放款对应日 / 每月指定日（day_of_month）"
+          },
+          "day_of_month": {
+            "type": ["integer", "null"],
+            "minimum": 1,
+            "maximum": 31,
+            "description": "repricing_day_rule=month_day 时的指定日"
+          },
+          "holiday_rule": {
+            "type": "string",
+            "enum": ["following_adjusted", "no_adjustment"],
+            "description": "重定价日遇非工作日：顺延至下一工作日 / 不顺延（顺延不改变引用报价与加点）"
+          },
+          "application": {
+            "type": "string",
+            "enum": ["on_repricing_date", "next_repricing_date"],
+            "description": "条款对利率的适用方式：重定价日即适用 / 自下一重定价日起适用"
+          },
+          "change_event_id": {
+            "type": ["string", "null"],
+            "description": "产生本版本的批准变更事件ID；首版为null"
+          },
+          "approved_by": { "type": "string", "description": "批准人/岗位" },
+          "approval_ref": { "type": "string", "description": "审批流水号" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
